@@ -1,0 +1,6 @@
+{
+  "database": "chocolates",
+  "timestamp": "2025-04-10T06:51:29.449Z",
+  "command": "mongodump --uri=\"mongodb://[CREDENCIALES_OCULTAS]@localhost:27017/chocolates?authSource=admin\" --out=/tmp/backup_1744267888863",
+  "format": "mongodump"
+}

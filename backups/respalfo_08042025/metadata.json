@@ -1,0 +1,6 @@
+{
+  "database": "modeling-wine-metadata",
+  "timestamp": "2025-04-10T07:55:36.236Z",
+  "command": "mongodump --uri=\"mongodb://[CREDENCIALES_OCULTAS]@localhost:27017/modeling-wine-metadata?authSource=admin\" --out=/tmp/backup_1744271735670",
+  "format": "mongodump"
+}
