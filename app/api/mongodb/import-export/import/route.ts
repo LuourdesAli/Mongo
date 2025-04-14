@@ -109,7 +109,7 @@ export async function POST(request: Request) {
     await execPromise(`docker cp "${localTempFile}" "mongodb:${containerTempFile}"`)
 
     // Usar la cadena de conexión que funciona para los respaldos
-    const connectionString = `mongodb://Ali:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
+    const connectionString = `mongodb://Lulu:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
 
     // Comando para importar los datos
     let command = ""
@@ -127,7 +127,7 @@ export async function POST(request: Request) {
       }`
     }
 
-    console.log(`Ejecutando comando de importación: ${command.replace(/Ali:Lourdes1102/, "USERNAME:PASSWORD")}`)
+    console.log(`Ejecutando comando de importación: ${command.replace(/Lulu:Lourdes1102/, "USERNAME:PASSWORD")}`)
 
     // Ejecutar el comando de importación
     const { stdout, stderr } = await execPromise(command)

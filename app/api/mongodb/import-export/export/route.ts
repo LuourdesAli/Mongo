@@ -56,7 +56,7 @@ export async function GET(request: Request) {
     console.log("Conectando a MongoDB usando el driver...")
 
     // Cadena de conexión para el driver
-    const connectionString = `mongodb://Ali:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
+    const connectionString = `mongodb://Lulu:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
 
     const client = new MongoClient(connectionString)
     await client.connect()

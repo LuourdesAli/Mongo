@@ -60,7 +60,7 @@ export async function POST(request: Request) {
 
     // Verificar conexión a MongoDB
     console.log("Verificando conexión a MongoDB...")
-    const pingCommand = `docker exec mongodb mongosh --username Ali --password Lourdes1102 --authenticationDatabase admin --eval "db.runCommand({ping:1})"`
+    const pingCommand = `docker exec mongodb mongosh --username Lulu --password Lourdes1102 --authenticationDatabase admin --eval "db.runCommand({ping:1})"`
     console.log("Comando de ping:", pingCommand.replace(/password \w+/, "password ****"))
 
     try {
@@ -102,7 +102,7 @@ export async function POST(request: Request) {
         const collectionName = path.basename(bsonFile, ".bson")
 
         console.log(`Restaurando archivo BSON ${bsonFile} a la base de datos ${targetDbName}`)
-        const restoreCommand = `docker exec mongodb mongorestore --username Ali --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} --collection=${collectionName} ${bsonFile} --drop`
+        const restoreCommand = `docker exec mongodb mongorestore --username Lulu --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} --collection=${collectionName} ${bsonFile} --drop`
         console.log("Comando de restauración:", restoreCommand.replace(/password \w+/, "password ****"))
 
         try {
@@ -144,12 +144,12 @@ export async function POST(request: Request) {
           const collection = targetCollectionName || fileName
 
           console.log(
-            `Importando archivo ${jsonFile} a la colección ${collection}: docker exec mongodb mongoimport --username Ali --password **** --authenticationDatabase admin --db=${targetDbName} --collection=${collection} --file=${jsonFile} --jsonArray --drop`,
+            `Importando archivo ${jsonFile} a la colección ${collection}: docker exec mongodb mongoimport --username Lulu --password **** --authenticationDatabase admin --db=${targetDbName} --collection=${collection} --file=${jsonFile} --jsonArray --drop`,
           )
 
           try {
             const { stdout, stderr } = await execPromise(
-              `docker exec mongodb mongoimport --username Ali --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} --collection=${collection} --file=${jsonFile} --jsonArray --drop`,
+              `docker exec mongodb mongoimport --username Lulu --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} --collection=${collection} --file=${jsonFile} --jsonArray --drop`,
             )
             console.log("Resultado de la importación:", stdout)
             console.log("Mensajes durante la importación:", stderr)
@@ -182,7 +182,7 @@ export async function POST(request: Request) {
         if (dirsList.length > 0) {
           // Intentar usar mongorestore en el directorio completo
           console.log(`Intentando restaurar usando mongorestore en el directorio completo: ${tempDir}`)
-          const restoreCommand = `docker exec mongodb mongorestore --username Ali --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} ${tempDir} --drop`
+          const restoreCommand = `docker exec mongodb mongorestore --username Lulu --password Lourdes1102 --authenticationDatabase admin --db=${targetDbName} ${tempDir} --drop`
           console.log("Comando de restauración:", restoreCommand.replace(/password \w+/, "password ****"))
 
           try {

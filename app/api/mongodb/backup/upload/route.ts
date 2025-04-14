@@ -69,7 +69,7 @@ export async function POST(request: Request) {
 
     // Ejecutar mongorestore para restaurar el respaldo
     // Corregido: Añadido --authenticationDatabase=admin para especificar dónde buscar las credenciales
-    const command = `docker exec mongodb mongorestore --db=${dbName} --drop /backups/${backupId} --username=Ali --password=Lourdes1102 --authenticationDatabase=admin`
+    const command = `docker exec mongodb mongorestore --db=${dbName} --drop /backups/${backupId} --username=Lulu --password=Lourdes1102 --authenticationDatabase=admin`
 
     console.log(`Ejecutando comando de restauración: ${command.replace(/Lourdes1102/, "********")}`)
 

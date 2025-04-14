@@ -101,7 +101,7 @@ export async function POST(request: Request) {
     await execPromise(`docker exec mongodb mkdir -p ${tempDir}`)
 
     // Usar una cadena de conexión completa para MongoDB
-    const connectionString = `mongodb://Ali:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
+    const connectionString = `mongodb://Lulu:Lourdes1102@localhost:27017/${dbName}?authSource=admin`
 
     // Ejecutar mongodump con la cadena de conexión
     const command = `docker exec mongodb mongodump --uri="${connectionString}" --out=${tempDir}`

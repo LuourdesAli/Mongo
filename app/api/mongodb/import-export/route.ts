@@ -34,9 +34,9 @@ export async function GET(request: Request) {
     let command
 
     if (format === "json") {
-      command = `docker exec mongodb mongoexport --db=${dbName} --collection=${collectionName} --out=${filePath} --query='${query}' --username=Ali --password=Lourdes1102`
+      command = `docker exec mongodb mongoexport --db=${dbName} --collection=${collectionName} --out=${filePath} --query='${query}' --username=Lulu --password=Lourdes1102`
     } else if (format === "csv") {
-      command = `docker exec mongodb mongoexport --db=${dbName} --collection=${collectionName} --out=${filePath} --type=csv --fields=_id,name,value --query='${query}' --username=Ali --password=Lourdes1102`
+      command = `docker exec mongodb mongoexport --db=${dbName} --collection=${collectionName} --out=${filePath} --type=csv --fields=_id,name,value --query='${query}' --username=Lulu --password=Lourdes1102`
     } else {
       return NextResponse.json({ success: false, error: "Formato no soportado" }, { status: 400 })
     }
