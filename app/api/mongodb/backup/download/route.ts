@@ -20,7 +20,7 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url)
     const backupId = searchParams.get("backupId")
-    const filePath = searchParams.get("filePath") || "Z:\Backups"
+    const filePath = searchParams.get("filePath") || "Z:/Backups"
     const mode = searchParams.get("mode") || "zip" // Modos: zip (default), list, download, info
 
     if (!backupId) {

@@ -1,0 +1,6 @@
+{
+  "database": "Musica",
+  "timestamp": "2025-04-30T05:16:17.094Z",
+  "command": "mongodump --uri=\"mongodb://[CREDENCIALES_OCULTAS]@localhost:27017/Musica?authSource=admin\" --out=/tmp/backup_1745990176215",
+  "format": "mongodump"
+}
